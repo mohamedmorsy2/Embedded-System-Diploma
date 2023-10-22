@@ -1,0 +1,40 @@
+#include  "lcd.h"
+#include  "ultrasonic.h"
+#include <util\delay.h>
+
+
+
+
+
+
+
+
+int main(void)
+{
+
+	LCD_init();
+	Ultrasonic_init();
+	uint16 distance=0;
+	distance = Ultrasonic_readDistance();
+	LCD_intgerToString(distance);
+
+	while(1)
+	{
+		distance = Ultrasonic_readDistance();
+
+		LCD_clearScreen();
+		LCD_intgerToString(distance);
+		_delay_ms(1000);*/
+
+
+	}
+
+
+
+	return 0;
+
+
+
+
+
+}

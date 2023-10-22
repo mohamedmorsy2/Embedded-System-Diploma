@@ -1,0 +1,42 @@
+#include  "lcd.h"
+#include  "ultrasonic.h"
+#include <util\delay.h>
+#include <avr\io.h>
+
+
+
+
+
+
+
+
+int main(void)
+{
+SREG |=(1<<7); /*enable I_BIt*/
+	LCD_init();
+	Ultrasonic_init();
+	uint16 distance=0;
+
+
+	while(1)
+	{
+		distance = Ultrasonic_readDistance();
+
+		LCD_clearScreen();
+		LCD_intgerToString(distance);
+
+		while(1);
+
+
+
+	}
+
+
+
+	return 0;
+
+
+
+
+
+}

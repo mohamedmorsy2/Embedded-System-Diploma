@@ -1,0 +1,45 @@
+#include  "lcd.h"
+#include  "ultrasonic.h"
+#include <util\delay.h>
+#include  "icu.h"
+
+
+
+
+
+
+
+int main(void)
+{
+
+	LCD_init();
+	ICU_ConfigType IcuConfig = {F_CPU_8 , RAISING};
+		ICU_init(&IcuConfig);
+	Ultrasonic_init();
+	uint16 distance=0;
+	_delay_ms(1000);
+	distance = Ultrasonic_readDistance();
+	LCD_intgerToString(distance);
+
+	while(1)
+	{
+		//distance = Ultrasonic_readDistance();
+
+		/*LCD_clearScreen();
+		LCD_intgerToString(distance);
+		_delay_ms(1000);*/
+		LCD_clearScreen();
+		LCD_intgerToString(distance);
+
+
+	}
+
+
+
+	return 0;
+
+
+
+
+
+}

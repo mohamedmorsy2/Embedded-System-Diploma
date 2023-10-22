@@ -1,0 +1,28 @@
+#include  "lcd.h"
+#include  "ultrasonic.h"
+
+
+
+
+
+
+
+
+int main(void)
+{
+
+	LCD_init();
+	Ultrasonic_init();
+
+
+while(1)
+{
+
+
+}
+
+
+
+
+
+}

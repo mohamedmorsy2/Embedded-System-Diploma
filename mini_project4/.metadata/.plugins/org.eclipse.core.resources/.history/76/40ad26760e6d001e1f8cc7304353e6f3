@@ -1,0 +1,33 @@
+#include  "lcd.h"
+#include  "ultrasonic.h"
+
+
+
+
+
+
+
+
+int main(void)
+{
+
+
+	Ultrasonic_init();
+	uint16 distance=0;
+	LCD_intgerToString(4);
+
+	while(1)
+	{
+		/*distance = Ultrasonic_readDistance();
+
+		LCD_clearScreen();
+		LCD_intgerToString(distance);*/
+
+
+	}
+
+
+
+
+
+}

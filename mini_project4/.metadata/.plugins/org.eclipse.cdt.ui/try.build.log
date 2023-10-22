@@ -1,0 +1,36 @@
+20:44:11 **** Incremental Build of configuration Debug for project try ****
+make all 
+Building file: ../try.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"try.d" -MT"try.o" -c -o "try.o" "../try.c"
+In file included from ../try.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util\delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../try.c
+ 
+Building target: try.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,try.map -mmcu=atmega32 -o "try.elf"  ./gpio.o ./icu.o ./lcd.o ./try.o ./ultrasonic.o   
+Finished building target: try.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S try.elf  >"try.lss"
+Finished building: try.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 try.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9198 bytes (28.1% Full)
+(.text + .data + .bootloader)
+
+Data:         13 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:44:13 Build Finished. 0 errors, 1 warnings. (took 1s.655ms)
+
