@@ -1,0 +1,17 @@
+/*
+ * dc_motor.h
+ *
+ *  Created on: Oct 10, 2023
+ *      Author: dell
+ */
+
+#ifndef DC_MOTOR_H_
+#define DC_MOTOR_H_
+
+/**************DEFINTIONS*************************/
+
+#define DC_PORT_ID            PORTD_ID
+#define DC_PIN0_ID             PIN4_ID
+#define DC_PIN1_ID              PIN5_ID
+
+#endif /* DC_MOTOR_H_ */

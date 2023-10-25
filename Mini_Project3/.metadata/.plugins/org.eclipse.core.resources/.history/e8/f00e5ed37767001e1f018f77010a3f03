@@ -1,0 +1,38 @@
+#include <avr\io.h>
+#include "std_types.h"
+#include "lcd.h"
+#include "adc.h"
+#include "lm35_sensor.h"
+
+
+
+
+
+
+
+
+
+
+
+
+int main (void)
+
+{
+	ADC_ConfigType adc_config = {INTERNAL , pr__8};   /*ADC CONFIGRATION*/
+	SREG |= (1<<7); /*enable I_BIT*/
+
+
+
+
+
+		 /*drivers initialization */
+
+			ADC_init(&adc_config);
+			LCD_init();
+
+
+
+
+
+	return 0;
+}

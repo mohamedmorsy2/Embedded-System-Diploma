@@ -1,0 +1,1116 @@
+17:31:05 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9630 bytes (29.4% Full)
+(.text + .data + .bootloader)
+
+Data:        266 bytes (13.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:31:34 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9642 bytes (29.4% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (13.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:40:17 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9636 bytes (29.4% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (13.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:41:33 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+../adc.c: In function 'ADC_init':
+../adc.c:41: error: expected expression before '=' token
+make: *** [adc.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:41:47 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9640 bytes (29.4% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (13.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:43:48 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9640 bytes (29.4% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (13.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:44:20 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9662 bytes (29.5% Full)
+(.text + .data + .bootloader)
+
+Data:        284 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:45:46 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9686 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:45:58 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9684 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:10:54 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:196: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+../mini_project3.c: In function 'main':
+../mini_project3.c:35: warning: implicit declaration of function 'DcMotor_Init'
+../mini_project3.c:62: warning: implicit declaration of function 'DcMotor_Rotate'
+../mini_project3.c:62: error: 'CW' undeclared (first use in this function)
+../mini_project3.c:62: error: (Each undeclared identifier is reported only once
+../mini_project3.c:62: error: for each function it appears in.)
+make: *** [mini_project3.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:11:21 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building file: ../timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"timer0.d" -MT"timer0.o" -c -o "timer0.o" "../timer0.c"
+Finished building: ../timer0.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9700 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:14:33 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9776 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:16:44 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9564 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:18:40 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9572 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:21:17 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9490 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:21:31 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9490 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:22:08 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9490 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:22:49 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9490 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:23:08 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9490 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:25:26 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9702 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:26:06 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9702 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:26:36 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9426 bytes (28.8% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:27:14 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9498 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:29:16 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building file: ../timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"timer0.d" -MT"timer0.o" -c -o "timer0.o" "../timer0.c"
+Finished building: ../timer0.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9524 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:29:39 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+../mini_project3.c: In function 'main':
+../mini_project3.c:40: warning: implicit declaration of function '_delay_ms'
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+./mini_project3.o: In function `main':
+../mini_project3.c:40: undefined reference to `_delay_ms'
+make: *** [mini_project3.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:30:01 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+In file included from ../mini_project3.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util\delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9760 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:30:18 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+In file included from ../mini_project3.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util\delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9760 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:30:33 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+In file included from ../mini_project3.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util\delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9760 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:30:57 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+In file included from ../mini_project3.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util\delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9606 bytes (29.3% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:35:39 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9760 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        306 bytes (14.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:35:55 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9762 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        308 bytes (15.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:17 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+../mini_project3.c: In function 'main':
+../mini_project3.c:84: warning: implicit declaration of function 'LLCD_moveCursor'
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+./mini_project3.o: In function `main':
+../mini_project3.c:84: undefined reference to `LLCD_moveCursor'
+make: *** [mini_project3.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:37:26 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9758 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        296 bytes (14.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:38:02 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9758 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        296 bytes (14.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:38:05 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9758 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        296 bytes (14.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:38:39 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9758 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        296 bytes (14.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:39:11 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../mini_project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"mini_project3.d" -MT"mini_project3.o" -c -o "mini_project3.o" "../mini_project3.c"
+Finished building: ../mini_project3.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega32 -o "mini_project3.elf"  ./adc.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./mini_project3.o ./timer0.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9750 bytes (29.8% Full)
+(.text + .data + .bootloader)
+
+Data:        296 bytes (14.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

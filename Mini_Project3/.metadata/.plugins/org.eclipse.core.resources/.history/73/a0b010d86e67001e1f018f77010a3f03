@@ -1,0 +1,35 @@
+#include <avr\io.h>
+#include "std_types.h"
+#include "lcd.h"
+#include "adc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+int main (void)
+
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
