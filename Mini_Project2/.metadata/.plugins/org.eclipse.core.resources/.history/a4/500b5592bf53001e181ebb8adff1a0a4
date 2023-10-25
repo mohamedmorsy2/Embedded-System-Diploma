@@ -1,0 +1,22 @@
+#include <avr/io.h>
+#include <util/delay.h>
+#include<avr/interrupt.h>
+
+unsigned char num1=0;
+
+void TIMER1_intil(char comp)
+{
+
+
+
+	SREG|=(1<7);
+
+}
+
+
+int main(void)
+{
+
+
+
+}
