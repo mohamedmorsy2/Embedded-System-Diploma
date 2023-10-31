@@ -1,0 +1,27 @@
+/*
+ * NAME : Mohamed MORSY
+ * Description :  source file for  BUZZER driver
+ *
+ *  Created on: Oct 25, 2023
+ *
+ */
+
+
+#include  "buzzer.h"
+
+
+
+
+/********************FUNCTION_DEFENITION******************/
+
+
+/*Description
+⮚ Setup the direction for the buzzer pin as output pin through the
+GPIO driver.
+⮚ Turn off the buzzer through the GPIO.*/
+
+void Buzzer_init(void)
+{
+	GPIO_setupPinDirection(BUZZER_PORT_ID , BUZZER_PIN_ID , PIN_OUTPUT);
+
+}

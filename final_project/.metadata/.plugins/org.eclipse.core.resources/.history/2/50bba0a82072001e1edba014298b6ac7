@@ -1,0 +1,76 @@
+/*
+ * NAME : Mohamed MORSY
+ * Description :  source file for timer 1 that support normal and compare mode
+ *
+ *  Created on: Oct 24, 2023
+ *
+ */
+
+#include <avr\io.h> /* To use ICU/Timer1 Registers */
+#include <avr/interrupt.h> /* For  ISR */
+#include "timer1.h"
+#include "common_macros.h"
+
+
+/**************** Global Variables ************************/
+
+/* Global variables to hold the address of the call back function in the application */
+
+ volatile void (*g_callBackPtr)(void) = NULL_PTR;
+
+ /************************  Interrupt Service Routines ****************************/
+
+
+ ISR(TIMER1_COMP_vect)
+ {
+
+
+ }
+
+
+/*****************FINCTION_DEFINTION***************************************/
+
+
+ void Timer1_init(const Timer1_ConfigType * Config_Ptr)
+ {
+	  /**Normal port operation, OC1A/OC1B disconnected*/
+	 TCCR1A = (1<<FOC1A) ;
+
+	 TCCR1B = (TCCR1B &0xF7) |  ((Config_Ptr->mode) <<3 );   /* to set timer mode*/
+
+	 TCCR1B = (TCCR1B &0xF8) |  ((Config_Ptr->prescaler) );  /* prescaler*/
+
+	 TCNT1 = Config_Ptr->initial_value;
+	 if(Config_Ptr->mode == CTC )
+	 {
+	 OCR1A = Config_Ptr->compare_value ;
+	 TIMSK  = (1<<OCIE1A); /*Output Compare A Match Interrupt Enable*/
+	 }
+	 else
+	 {
+		 TIMSK  = (1<<TOIE1); /*Overflow Interrupt Enable*/
+
+	 }
+
+	 /****************************************************************************/
+	 void Timer1_deInit(void)
+	 {
+		 TCCR1B = 0 ;  /*no clock*/
+
+	 }
+	 /**************************************************************/
+
+	 void Timer1_setCallBack(void(*a_ptr)(void))
+	 {
+		 g_callBackPtr = a_ptr ;
+
+	 }
+
+
+	 }
+
+
+
+
+
+

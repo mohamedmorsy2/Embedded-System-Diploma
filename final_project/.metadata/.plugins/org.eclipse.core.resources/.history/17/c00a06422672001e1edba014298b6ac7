@@ -1,0 +1,32 @@
+#include "timer1.h"
+#include "gpio.h"
+#include "common_macros.h"
+#include <avr/io.h>
+
+
+
+
+
+
+
+
+int main()
+{
+	/*timer setting*/
+	Timer1_ConfigType config_timer = {0 , 7813 , clkI_1024 ,CTC};
+
+GPIO_setupPinDirection(PORTB_ID , PIN4_ID , PIN_OUTPUT);
+
+SREG |= (1<<7);
+Timer1_setCallBack(NULL_PTR);
+Timer1_init(&config_timer);
+
+
+while(1)
+{
+
+}
+
+
+return 0;
+}

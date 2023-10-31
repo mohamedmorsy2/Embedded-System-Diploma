@@ -1,0 +1,24 @@
+/*
+ * NAME : Mohamed MORSY
+ * Description :  source file for timer 1 that support normal and compare mode
+ *
+ *  Created on: Oct 24, 2023
+ *
+ */
+
+
+#include "timer1.h"
+#include "common_macros.h"
+
+/**************** Global Variables ************************/
+
+/* Global variables to hold the address of the call back function in the application */
+
+ volatile void (*g_callBackPtr)(void) = NULL_PTR;
+
+
+
+
+
+
+

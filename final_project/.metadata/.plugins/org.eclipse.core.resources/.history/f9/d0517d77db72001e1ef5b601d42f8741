@@ -1,0 +1,23 @@
+#include "timer1.h"
+#include "gpio.h"
+#include "common_macros.h"
+#include <avr/io.h>
+#include "buzzer.h"
+
+
+
+
+
+
+
+
+int main()
+{
+
+
+
+while(1);
+
+
+return 0;
+}

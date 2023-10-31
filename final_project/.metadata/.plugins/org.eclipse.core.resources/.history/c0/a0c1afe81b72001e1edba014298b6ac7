@@ -1,0 +1,10 @@
+/*
+ * NAME : Mohamed MORSY
+ * Description :  source file for timer 1 that support normal and compare mode
+ *
+ *  Created on: Oct 24, 2023
+ *
+ */
+
+
+#include "timer1.h"
