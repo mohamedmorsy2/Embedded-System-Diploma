@@ -7,27 +7,33 @@ C_SRCS += \
 ../Control_ECU.c \
 ../buzzer.c \
 ../dc_motor.c \
+../external_eeprom.c \
 ../gpio.c \
 ../lcd.c \
-../timer0_pwm.c \
+../timer1.c \
+../twi.c \
 ../uart.c 
 
 OBJS += \
 ./Control_ECU.o \
 ./buzzer.o \
 ./dc_motor.o \
+./external_eeprom.o \
 ./gpio.o \
 ./lcd.o \
-./timer0_pwm.o \
+./timer1.o \
+./twi.o \
 ./uart.o 
 
 C_DEPS += \
 ./Control_ECU.d \
 ./buzzer.d \
 ./dc_motor.d \
+./external_eeprom.d \
 ./gpio.d \
 ./lcd.d \
-./timer0_pwm.d \
+./timer1.d \
+./twi.d \
 ./uart.d 
 
 

@@ -1,4 +1,4 @@
-05:10:34 **** Incremental Build of configuration Debug for project test ****
+21:13:54 **** Incremental Build of configuration Debug for project test ****
 make all 
 Building file: ../test.c
 Invoking: AVR Compiler
@@ -22,15 +22,15 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5660 bytes (17.3% Full)
+Program:    2626 bytes (8.0% Full)
 (.text + .data + .bootloader)
 
-Data:         10 bytes (0.5% Full)
+Data:         12 bytes (0.6% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-05:10:35 Build Finished. 0 errors, 1 warnings. (took 1s.407ms)
+21:13:55 Build Finished. 0 errors, 1 warnings. (took 1s.248ms)
 

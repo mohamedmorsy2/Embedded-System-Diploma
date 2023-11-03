@@ -3,6 +3,8 @@
 #include "keypad.h"
 #include "lcd.h"
 #include "uart.h"
+#include "timer1.h"
+
 
 
 /*    codes_used_in program to communicate between two microcontroller
@@ -11,12 +13,39 @@
  *       $   change pass
  */
 
+/**********************/
+ uint16  g_tick = 0;
+void tickk(void)
+{
+	g_tick++;
+}
 
+void delay (uint16 time)
+{
+	SREG |=(1<<7);
+
+	while(g_tick != time);
+	g_tick = 0;
+
+	SREG &= !(1<<7);
+
+
+}
+
+/**************************/
 
 
 
 int main(void)
 {
+
+	/******************/
+
+
+		Timer1_ConfigType timer_Config = {0 , 7813 ,clkI_1024 , CTC};
+		Timer1_init(&timer_Config);
+		Timer1_setCallBack(tickk);
+		/*******************/
 
 	uint8 data,condition  ;
 	USART_ConfigType uart_config = {asynch , disabled ,one_bit ,eight_bit ,9600};
@@ -205,13 +234,19 @@ int main(void)
 					{
 						LCD_clearScreen();
 						LCD_displayString("door is unlocking");
-						_delay_ms(1000);
+						//_delay_ms(15000);
+						delay(15);
 						LCD_clearScreen();
 						LCD_displayString("door is open");
-						_delay_ms(2000);
+						//_delay_ms(3000);
+						delay(3);
+
 						LCD_clearScreen();
 						LCD_displayString("door is Locking");
-						_delay_ms(1000);
+						//_delay_ms(15000);
+						delay(15);
+
+
 
 
 
@@ -232,6 +267,7 @@ int main(void)
 						door_pass=1;
 						_delay_ms(1000);
 					}
+
 
 				}
 

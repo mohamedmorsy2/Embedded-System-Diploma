@@ -53,6 +53,6 @@ DcMotor_State data type should be declared as enum or uint8.
 
 
 
-void DcMotor_Rotate(DcMotor_State state,uint8 speed);
+void DcMotor_Rotate(DcMotor_State state);
 
 #endif /* DC_MOTOR_H_ */

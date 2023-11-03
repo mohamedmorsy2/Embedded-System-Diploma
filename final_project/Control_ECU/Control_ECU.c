@@ -4,6 +4,9 @@
 #include "uart.h"
 # include "dc_motor.h"
 # include "buzzer.h"
+#include "external_eeprom.h"
+#include "timer1.h"
+
 
 
 /*    codes_used_in program to communicate between two microcontroller
@@ -12,7 +15,29 @@
  *       $   change pass
  */
 
+/*****************************************************************/
+uint16  g_tick = 0;
 
+/*function call in  the ISR of Timer 1*/
+void tickk(void)
+{
+	g_tick++;
+}
+
+/*delay time function in second */
+void delay_s (uint16 time)
+{
+	SREG |=(1<<7);
+
+	while(g_tick != time);
+	g_tick = 0;
+
+	SREG &= !(1<<7);
+
+
+}
+
+/**********************************************************************/
 
 /* function to compare between to passwords
  * return 1 if they match
@@ -32,17 +57,52 @@ uint8 check_pass(uint8* pass1  , uint8* pass1_confirm)
 
 }
 
+/*check pass from EEPROM*/
+
+uint8 check_pass_eeprom(uint8* pass1 , uint8 memory_ptr)
+{
+	uint8 i ;
+	uint8 data =0;
+	for(i=0 ; i<5 ; i++)
+	{
+		EEPROM_readByte(memory_ptr+i,&data);
+		if(data != pass1[i])
+		{
+			return 0 ;
+		}
+	}
+
+	return 1 ;
+}
+
 int main(void)
+
 {
 
-	USART_ConfigType uart_config = {asynch , disabled ,one_bit ,eight_bit ,9600};
-	LCD_init();
-
-	UART_init(&uart_config);
 	uint8 pass1[5]={0};
 	uint8 pass1_confirm[5]={0};
+
+	uint8 data = 0;
+	uint16 memory_ptr = 0x0000;  /* address of MEMORY in EEPROM */
 	uint8 i ;
 	uint8 command =0;
+
+
+
+	/* set Configuration of Timer1
+	 * every ISR = 1 second
+	 * */
+	Timer1_ConfigType timer_Config = {0 , 7813 ,clkI_1024 , CTC};
+	Timer1_init(&timer_Config);
+	Timer1_setCallBack(tickk);
+	/*******************/
+	/* set Configuration of USART*/
+	USART_ConfigType uart_config = {asynch , disabled ,one_bit ,eight_bit ,9600};
+	UART_init(&uart_config);
+
+	LCD_init();
+
+
 	DcMotor_Init();
 	Buzzer_init();
 	while(1)
@@ -53,7 +113,7 @@ int main(void)
 		{
 
 
-			/*Initialize pass*/
+			/*Initialize pass ARRAYS*/
 			for(i=0 ; i<5 ; i++)
 			{
 				pass1[i] = 0;
@@ -61,16 +121,28 @@ int main(void)
 			}
 
 
-			/*Receive first password*/
+			/*Receive first password in pass1*/
 			for(i=0 ; i<5 ; i++)
 			{
 				pass1[i] = UART_recieveByte();
 			}
 
-			/*Receive  password confirmation*/
+			/*Receive  password confirmation in pass1_confirm*/
 			for(i=0 ; i<5 ; i++)
 			{
 				pass1_confirm[i] = UART_recieveByte();
+			}
+			/******store pass in EEPROM***********/
+			if( check_pass(pass1 ,pass1_confirm ) )
+			{
+
+				for(i=0 ; i<5 ; i++)
+				{
+					EEPROM_writeByte(memory_ptr+i , pass1[i]);
+					_delay_ms(10);
+
+				}
+
 			}
 			/*send the result of the match of two password*/
 			UART_sendByte (check_pass(pass1 ,pass1_confirm ));
@@ -79,10 +151,13 @@ int main(void)
 
 			/*******************/
 			LCD_clearScreen();
+
 			for(i=0 ; i<5 ; i++)
 			{
-				LCD_intgerToString(pass1[i]);
+				EEPROM_readByte(memory_ptr+i,&data);
+				LCD_intgerToString(data);
 			}
+			/*****************/
 			LCD_moveCursor(1,0);
 
 			for(i=0 ; i<5 ; i++)
@@ -110,24 +185,27 @@ int main(void)
 				pass1_confirm[i] = UART_recieveByte();
 			}
 			/*check pass*/
-			if ( check_pass(pass1 ,pass1_confirm) )
+			if ( check_pass_eeprom(pass1_confirm ,memory_ptr) )
 			{
 
-				UART_sendByte (check_pass(pass1 ,pass1_confirm ));
-				DcMotor_Rotate(CW,100);
-				_delay_ms(1000);
-				DcMotor_Rotate(STOP,100);
-				_delay_ms(2000);
-				DcMotor_Rotate(ACW,100);
-				_delay_ms(1000);
-				DcMotor_Rotate(STOP,100);
+				UART_sendByte (1);
+				DcMotor_Rotate(CW);
+				//_delay_ms(15000);
+				delay_s(15);
+				DcMotor_Rotate(STOP);
+				//_delay_ms(3000);
+				delay_s(3);
+				DcMotor_Rotate(ACW);
+				//_delay_ms(15000);
+				delay_s(15);
+				DcMotor_Rotate(STOP);
 				//UART_sendByte (check_pass(pass1 ,pass1_confirm ));
 
 			}
 			else
 			{
 
-				UART_sendByte (check_pass(pass1 ,pass1_confirm ));
+				UART_sendByte (0);
 			}
 			command = 0;
 
@@ -151,16 +229,16 @@ int main(void)
 			}
 			_delay_ms(10);
 			/*check pass*/
-			if ( check_pass(pass1 ,pass1_confirm) )
+			if ( check_pass_eeprom(pass1_confirm ,memory_ptr) )
 			{
 				command = '*';
-				UART_sendByte (check_pass(pass1 ,pass1_confirm ));
+				UART_sendByte (1);
 
 			}
 			else
 			{
 
-				UART_sendByte (check_pass(pass1 ,pass1_confirm ));
+				UART_sendByte (0);
 			}
 
 		}

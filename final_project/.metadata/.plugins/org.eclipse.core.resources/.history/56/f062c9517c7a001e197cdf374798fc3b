@@ -1,0 +1,48 @@
+#include "timer1.h"
+#include "gpio.h"
+#include "common_macros.h"
+#include <avr/io.h>
+#include <util\delay.h>
+#include "buzzer.h"
+
+uint32 tick = 0;
+
+void tickk(void)
+{
+	tick++;
+}
+
+void delay (uint32 time)
+{
+
+
+}
+
+
+
+
+
+
+int main()
+{
+	Buzzer_init();
+	Timer1_ConfigType timer_Config = {0 , 7813 ,clkI_1024 , CTC};
+	Timer1_init(&timer_Config);
+	Timer1_setCallBack(tickk);
+
+
+
+
+while(1)
+{
+	Buzzer_on();
+	_delay_ms(1000);
+	Buzzer_off();
+	_delay_ms(1000);
+
+
+}
+
+
+return 0;
+}

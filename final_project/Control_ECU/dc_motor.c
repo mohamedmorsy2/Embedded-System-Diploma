@@ -8,7 +8,7 @@
 #include "dc_motor.h"
 #include "avr\io.h"
 
-#include "timer0_pwm.h"
+
 
 
 
@@ -32,7 +32,7 @@ void DcMotor_Init(void)
 }
 
 /************************************************/
-void DcMotor_Rotate(DcMotor_State state,uint8 speed)
+void DcMotor_Rotate(DcMotor_State state)
 {
 
 	/* set DC_MOTOR DIRECTION*/
@@ -57,12 +57,6 @@ void DcMotor_Rotate(DcMotor_State state,uint8 speed)
 		/*do nothing*/
 	}
 
-	/*set MOTOR SPEED*/
-
-	uint8 duty_cycl ;
-
-	duty_cycl = (255 *((float)speed/100));
-	PWM_Timer0_Duty_cycle(duty_cycl);
 
 
 
